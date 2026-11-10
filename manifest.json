@@ -1,0 +1,7 @@
+{
+  "display_name": "QA Test Integration",
+  "description": "Test integration",
+  "version": "1.0.0",
+  "entry": "main.py",
+  "inputs": []
+}
