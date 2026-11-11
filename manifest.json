@@ -5,6 +5,7 @@
   "description": "Retrieve data as defined in the query file for all projects in Xacta360",
   "author": "Author",
   "entry": "main.py",
+  "detais": "Sample Value",
   "support": [
     "x360"
   ],
