@@ -1,7 +1,48 @@
 {
-  "display_name": "QA Test Integration 2",
-  "description": "Test integration 2",
-  "version": "1.0.0",
+  "display_name": "QA Test Integration 2 via API",
+  "version": "1.0",
+  "image": "",
+  "description": "Retrieve data as defined in the query file for all projects in Xacta360",
+  "author": "Author",
   "entry": "main.py",
-  "inputs": []
+  "support": [
+    "x360"
+  ],
+  "inputs": [
+    {
+      "name": "advanced_query_file",
+      "label": "Choose advanced query file: ",
+      "type": "file",
+      "required": false,
+      "allowed_extensions": [
+        "json"
+      ],
+      "max_size_mb": 25
+    },
+    {
+      "name": "folder_name",
+      "label": "Folder Name in Xacta: ",
+      "type": "string",
+      "required": true,
+      "max_length": 255
+    },
+    {
+      "name": "x360",
+      "label": "X360 Server",
+      "type": "server",
+      "required": true,
+      "allowed_server_types": "x360",
+      "auto_select_if_single": true,
+      "hidden_if_auto_selected": true
+    }
+  ],
+  "readme": "README.md",
+  "execution": {
+    "allow_subprocess": true,
+    "allowed_commands": [
+      "python",
+      "jq",
+      "awk"
+    ]
+  }
 }
